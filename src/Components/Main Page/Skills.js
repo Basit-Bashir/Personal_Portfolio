@@ -9,15 +9,15 @@ const Skills = () => {
           Skills
         </p>
         <div className="px-6 py-8   ">
-          <ul className="grid grid-cols-2  gap-8 place-items-center bg-gradient-to-b from-zinc-500 rounded-lg px-8 py-8 tracking-[.15em] text-2xl shadow-md shadow-white h-80 ">
-            <li className="text-orange-500 bg-transparent ">
+          <ul className="grid grid-cols-2  gap-8 place-items-center bg-gradient-to-b from-zinc-500 rounded-lg px-8 py-8 tracking-[.15em] text-2xl shadow-md shadow-white h-80 text-white">
+            <li className=" bg-transparent ">
               <FontAwesomeIcon
                 icon={faArrowRight}
                 className="bg-transparent mr-4 "
               />
               HTML{" "}
             </li>
-            <li className="text-orange-500 bg-transparent ">
+            <li className=" bg-transparent ">
               <FontAwesomeIcon
                 icon={faArrowRight}
                 className="bg-transparent mr-4 "
@@ -25,7 +25,7 @@ const Skills = () => {
               CSS
             </li>
 
-            <li className="text-orange-500 bg-transparent">
+            <li className="bg-transparent">
               {" "}
               <FontAwesomeIcon
                 icon={faArrowRight}
@@ -33,7 +33,7 @@ const Skills = () => {
               />
               JavaScript
             </li>
-            <li className="text-orange-500 bg-transparent">
+            <li className=" bg-transparent">
               {" "}
               <FontAwesomeIcon
                 icon={faArrowRight}
@@ -41,7 +41,7 @@ const Skills = () => {
               />
               ReactJS
             </li>
-            <li className="text-orange-500 bg-transparent text-center col-span-2  py-8 ">
+            <li className="bg-transparent text-center col-span-2  py-8 ">
               <FontAwesomeIcon
                 icon={faArrowRight}
                 className="bg-transparent mr-4 "
