@@ -7,7 +7,7 @@ const Main = () => {
       <div className="md:flex md:gap-[24px]  md:items-center    bg-transparent p-[8%] rounded-lg shadow-md ">
         <div className="md:w-1.5 md:h-40 bg-gradient-to-b from-orange-500  " />
 
-        <p className="px-4 py-4 text-white   bg-transparent text-4xl tracking-[.1em]">
+        <p className="px-4 py-4 text-white bg-transparent text-4xl tracking-[.1em]">
           Hi, I'm
           <br />
           <span className="bg-transparent text-orange-500 text-7xl">
