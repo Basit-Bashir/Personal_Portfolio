@@ -1,51 +1,49 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHtml5,
+  faCss3Alt,
+  faJs,
+  faReact,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Skills = () => {
   return (
-    <section className=" relative ">
-      <div className="">
-        <p className="text-orange-500 text-7xl text-center mt-8 animate-wiggle underline  decoration-4  underline-offset-[8px]">
+    <section className="relative">
+      <div className="container  mx-auto px-4">
+        <p className="text-orange-500 text-4xl md:text-7xl text-center mt-8 underline underline-offset-[8px]">
           Skills
         </p>
-        <div className="px-6 py-8">
-          <ul className="md:grid  md:gap-8 md:grid-cols-2  md:place-items-center bg-gradient-to-b from-zinc-500 rounded-lg md:px-8 md:py-8 tracking-[.15em] text-2xl shadow-md shadow-white md:h-80 text-white">
-            <li className=" bg-transparent ">
+        <div className="md:flex md:justify-center md:px-6 py-8">
+          <ul className="md:grid md:gap-8 md:grid-cols-2 md:place-items-center bg-gradient-to-b from-zinc-500 rounded-lg md:px-8 md:py-8 tracking-[.15em] text-xl md:text-2xl shadow-sm shadow-white text-white flex flex-col items-center ">
+            <li className="flex items-center bg-transparent py-4">
+              HTML
               <FontAwesomeIcon
-                icon={faArrowRight}
-                className="bg-transparent mr-4 "
+                icon={faHtml5}
+                className="ml-4 bg-transparent text-red-500 md:text-4xl text-2xl"
               />
-              HTML{" "}
             </li>
-            <li className=" bg-transparent ">
-              <FontAwesomeIcon
-                icon={faArrowRight}
-                className="bg-transparent mr-4 "
-              />
+            <li className="flex items-center bg-transparent py-4">
               CSS
-            </li>
-
-            <li className="bg-transparent">
-              {" "}
               <FontAwesomeIcon
-                icon={faArrowRight}
-                className="bg-transparent mr-4 "
+                icon={faCss3Alt}
+                className="ml-4 bg-transparent text-blue-500 md:text-4xl text-2xl"
               />
+            </li>
+            <li className="flex items-center bg-transparent py-4">
               JavaScript
-            </li>
-            <li className=" bg-transparent">
-              {" "}
               <FontAwesomeIcon
-                icon={faArrowRight}
-                className="bg-transparent mr-4 "
+                icon={faJs}
+                className="ml-4 bg-transparent text-yellow-500 md:text-4xl text-2xl"
               />
+            </li>
+            <li className="flex items-center bg-transparent py-4">
               ReactJS
-            </li>
-            <li className="bg-transparent text-center col-span-2  py-8 ">
               <FontAwesomeIcon
-                icon={faArrowRight}
-                className="bg-transparent mr-4 "
+                icon={faReact}
+                className="ml-4 bg-transparent text-blue-300 md:text-4xl text-2xl"
               />
+            </li>
+            <li className="flex items-center bg-transparent py-4 md:text-center md:col-span-2">
               TailwindCSS
             </li>
           </ul>
@@ -54,4 +52,5 @@ const Skills = () => {
     </section>
   );
 };
+
 export default Skills;
