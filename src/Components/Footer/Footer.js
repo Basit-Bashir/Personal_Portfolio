@@ -6,10 +6,19 @@ const Footer = () => {
         name="twitter"
         color="white"
         animation="tada"
-        background-color="none"
       ></box-icon>
-      <box-icon type="logo" name="github" color="white"></box-icon>
-      <box-icon type="logo" name="linkedin" color="white"></box-icon>
+      <box-icon
+        type="logo"
+        name="github"
+        color="white"
+        animation="tada"
+      ></box-icon>
+      <box-icon
+        type="logo"
+        name="linkedin"
+        color="white"
+        animation="tada"
+      ></box-icon>
     </div>
   );
 };

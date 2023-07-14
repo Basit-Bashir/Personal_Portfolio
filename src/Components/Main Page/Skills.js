@@ -3,13 +3,13 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const Skills = () => {
   return (
-    <section className="h-3/4 relative">
-      <div className="  ">
+    <section className=" relative ">
+      <div className="">
         <p className="text-orange-500 text-7xl text-center mt-8 animate-wiggle underline  decoration-4  underline-offset-[8px]">
           Skills
         </p>
-        <div className="px-6 py-8   ">
-          <ul className="grid grid-cols-2  gap-8 place-items-center bg-gradient-to-b from-zinc-500 rounded-lg px-8 py-8 tracking-[.15em] text-2xl shadow-md shadow-white h-80 text-white">
+        <div className="px-6 py-8">
+          <ul className="md:grid  md:gap-8 md:grid-cols-2  md:place-items-center bg-gradient-to-b from-zinc-500 rounded-lg md:px-8 md:py-8 tracking-[.15em] text-2xl shadow-md shadow-white md:h-80 text-white">
             <li className=" bg-transparent ">
               <FontAwesomeIcon
                 icon={faArrowRight}

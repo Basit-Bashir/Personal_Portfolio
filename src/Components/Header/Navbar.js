@@ -23,6 +23,7 @@ const Navbar = () => {
               ["Reports", "/reports"],
             ].map(([title, url]) => (
               <a
+                key={url}
                 href={url}
                 className="rounded-lg px-3 py-2 text-white transition-all duration-500 hover:bg-orange-500 hover:text-black "
               >
