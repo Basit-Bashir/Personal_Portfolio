@@ -3,8 +3,8 @@ import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 const Main = () => {
   return (
-    <div className="h-screen w-full  px-4 mx-auto items-center shadow-md  shadow-white bg-[url('https://unsplash.com/photos/gpa8Y_Fk7Rg/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjg4OTcyNjIzfA&force=true')] bg-cover  ">
-      <div className="flex gap-[24px]  items-center text-center   bg-transparent p-[8%] rounded-lg shadow-md ">
+    <div className="h-screen px-4 items-center shadow-md  shadow-white bg-[url('https://unsplash.com/photos/gpa8Y_Fk7Rg/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjg4OTcyNjIzfA&force=true')] bg-cover bg-fixed ">
+      <div className="flex gap-[24px]  items-center text-center   bg-transparent p-[8%] rounded-lg shadow-md">
         <div className="w-1.5 h-60 bg-gradient-to-b from-orange-500  " />
 
         <p className="px-4 py-4 text-white   bg-transparent text-4xl tracking-[.1em]">
