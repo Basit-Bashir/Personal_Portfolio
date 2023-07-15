@@ -51,7 +51,7 @@ const Navbar = () => {
       </nav>
       <div
         className={`flex flex-col items-center transition-all duration-500 ease-in-out bg-gradient-to-b from-zinc-500 ${
-          isOpen ? "opacity-100 max-h-screen" : "opacity-0 max-h-0"
+          isOpen ? "opacity-100 max-h-screen " : "opacity-0 max-h-0"
         }`}
       >
         {[

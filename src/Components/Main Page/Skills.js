@@ -9,12 +9,12 @@ import {
 const Skills = () => {
   return (
     <section className="relative">
-      <div className="container  mx-auto px-4">
-        <p className="text-orange-500 text-4xl md:text-7xl text-center mt-8 underline underline-offset-[8px]">
+      <div className="container mx-auto px-4">
+        <p className="text-orange-500 text-4xl md:text-7xl text-center mt-8 underline underline-offset-[8px] animate-wiggle">
           Skills
         </p>
         <div className="md:flex md:justify-center md:px-6 py-8">
-          <ul className="md:grid md:gap-8 md:grid-cols-2 md:place-items-center bg-gradient-to-b from-zinc-500 rounded-lg md:px-8 md:py-8 tracking-[.15em] text-xl md:text-2xl shadow-sm shadow-white text-white flex flex-col items-center ">
+          <ul className="md:grid md:gap-8 md:grid-cols-2 md:place-items-center bg-gradient-to-b from-zinc-500 rounded-lg md:px-8 md:py-8 tracking-[.15em] text-xl md:text-2xl shadow-sm shadow-white text-white flex flex-col items-center">
             <li className="flex items-center bg-transparent py-4">
               HTML
               <FontAwesomeIcon
