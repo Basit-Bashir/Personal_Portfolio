@@ -35,7 +35,7 @@ const Projects = () => {
                 href="https://omnifood-basits.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-link block text-center py-2 px-4 text-white rounded-xl transition all duration-500 border-2 hover:bg-orange-500 bg-transparent"
+                className="btn-link block text-center py-2 px-4 text-white rounded-xl transition all duration-500 border-2 hover:bg-orange-500 bg-transparent font-bold"
               >
                 Click here!
               </a>
@@ -65,7 +65,7 @@ const Projects = () => {
                 href="https://north-star-frontend.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-link block text-center py-2 px-4 text-white rounded-xl transition all duration-500 border-2 hover:bg-orange-500 bg-transparent"
+                className="btn-link block text-center py-2 px-4 text-white rounded-xl transition all duration-500 border-2 hover:bg-orange-500 bg-transparent font-bold"
               >
                 Click here!
               </a>
@@ -95,7 +95,7 @@ const Projects = () => {
                 href="https://basit-weather-app.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-link block text-center py-2 px-4 text-white rounded-xl transition all duration-500 border-2 hover:bg-orange-500 bg-transparent"
+                className="btn-link block text-center py-2 px-4 text-white rounded-xl transition all duration-500 border-2 hover:bg-orange-500 bg-transparent font-bold"
               >
                 Click here!
               </a>
@@ -125,7 +125,7 @@ const Projects = () => {
                 href="https://workout-calculation.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-link block text-center py-2 px-4 text-white rounded-xl transition all duration-500 border-2 hover:bg-orange-500 bg-transparent"
+                className="btn-link block text-center py-2 px-4 text-white rounded-xl transition all duration-500 border-2 hover:bg-orange-500 bg-transparent font-bold"
               >
                 Click here!
               </a>
