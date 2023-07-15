@@ -20,7 +20,7 @@ const Projects = () => {
             <img
               src={omni}
               alt="omnifood"
-              className="h-64 w-full object-cover "
+              className="h-64 w-full object-scale-down md:object-cover border-b-2"
             />
             <div className="p-6 ">
               <h3 className="text-xl text-orange-500 font-semibold mb-4">
@@ -46,7 +46,7 @@ const Projects = () => {
             <img
               src={bank}
               alt="omnifood"
-              className="h-64 w-full object-cover "
+              className="h-64 w-full object-scale-down md:object-cover border-b-2"
             />
             <div className="p-6 h-full">
               <h3 className="text-xl text-orange-500 font-semibold mb-4">
@@ -71,7 +71,7 @@ const Projects = () => {
             <img
               src={guess}
               alt="omnifood"
-              className="h-64 w-full object-cover border-b-2"
+              className="h-64 w-full object-scale-down md:object-cover border-b-2"
             />
             <div className="p-6 h-full">
               <h3 className="text-xl text-orange-500 font-semibold mb-4">
@@ -97,7 +97,7 @@ const Projects = () => {
             <img
               src={map}
               alt="omnifood"
-              className="h-64 w-full object-cover md:object-scale-down "
+              className="h-64 w-full object-scale-down md:object-cover border-b-2 "
             />
             <div className="p-6 h-full">
               <h3 className="text-xl text-orange-500 font-semibold mb-4">
