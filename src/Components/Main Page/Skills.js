@@ -4,6 +4,7 @@ import {
   faCss3Alt,
   faJs,
   faReact,
+  faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 
 const Skills = () => {
@@ -43,8 +44,15 @@ const Skills = () => {
                 className="ml-4 bg-transparent text-blue-300 md:text-4xl text-2xl"
               />
             </li>
-            <li className="flex items-center bg-transparent py-4 md:text-center md:col-span-2">
+            <li className="flex items-center bg-transparent py-4 md:text-center ">
               TailwindCSS
+            </li>
+            <li className="flex items-center bg-transparent py-4 md:text-center ">
+              GitHub
+              <FontAwesomeIcon
+                icon={faGithub}
+                className="ml-4 bg-transparent text-white md:text-4xl text-2xl"
+              />
             </li>
           </ul>
         </div>
