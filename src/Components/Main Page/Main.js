@@ -20,7 +20,7 @@ const Main = () => {
       }
     };
 
-    interval = setInterval(revealNextCharacter, 1000);
+    interval = setInterval(revealNextCharacter, 300);
 
     return () => clearInterval(interval);
   }, []);
