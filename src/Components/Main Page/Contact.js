@@ -16,11 +16,11 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     if (Object.values(formData).some((value) => value === "")) {
       setShowMessage("Fill in the Fields!");
-      setTimeout(() => setShowMessage(false), 2000);
+      setTimeout(() => setShowMessage(false), 3000);
       return;
     }
     setShowMessage("Form Submitted ❤");
-    setTimeout(() => setShowMessage(false), 2000);
+    setTimeout(() => setShowMessage(false), 3000);
 
     setFormData({
       name: "",

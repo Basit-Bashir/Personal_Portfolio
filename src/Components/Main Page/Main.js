@@ -1,7 +1,29 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import React, { useEffect, useState } from "react";
 
 const Main = () => {
+  const [revealedText, setRevealedText] = useState("");
+  const text = "Basit";
+
+  useEffect(() => {
+    let currentIndex = 0;
+    let interval;
+
+    const revealNextCharacter = () => {
+      if (currentIndex < text.length) {
+        setRevealedText(() => text.slice(0, currentIndex));
+        currentIndex++;
+      } else {
+        setRevealedText("");
+        currentIndex = 0;
+      }
+    };
+
+    interval = setInterval(revealNextCharacter, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div className="md:h-screen px-4 shadow-md  shadow-white bg-[url('https://unsplash.com/photos/gpa8Y_Fk7Rg/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjg4OTcyNjIzfA&force=true')] bg-cover bg-fixed ">
       <div className="md:flex md:gap-[24px]  md:items-center  w-screen md:p-[8%] bg-transparent  rounded-lg shadow-md ">
@@ -11,8 +33,7 @@ const Main = () => {
           Hi, I'm
           <br />
           <span className="bg-transparent text-orange-500 md:text-8xl text-6xl">
-            {" "}
-            Basit
+            {revealedText.padEnd(text.length, "_____")}
           </span>
         </p>
 
