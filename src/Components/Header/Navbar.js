@@ -17,10 +17,10 @@ const Navbar = () => {
 
           <div className="hidden md:flex gap-8 bg-transparent">
             {[
-              ["Home", "/dashboard"],
-              ["Team", "/team"],
+              ["Home", "/main"],
+              ["Skills", "/skills"],
               ["Projects", "/projects"],
-              ["Reports", "/reports"],
+              ["Contact", "/contact"],
             ].map(([title, url]) => (
               <a
                 key={url}
@@ -55,10 +55,10 @@ const Navbar = () => {
         }`}
       >
         {[
-          ["Home", "/dashboard"],
-          ["Team", "/team"],
+          ["Home", "/main"],
+          ["Skills", "/skills"],
           ["Projects", "/projects"],
-          ["Reports", "/reports"],
+          ["Contact", "/contact"],
         ].map(([title, url]) => (
           <a
             key={url}
