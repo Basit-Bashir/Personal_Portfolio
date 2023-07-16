@@ -34,19 +34,19 @@ const ContactForm = () => {
       <h2 className="text-orange-500 text-4xl md:text-7xl text-5xl text-center mb-12 underline underline-offset-[8px] animate-wiggle">
         Contact Me
       </h2>
-      <div className="container mx-auto">
-        <div className="max-w-md mx-auto">
-          <div className="shadow-md shadow-white rounded-lg shadow-lg p-10 text-center text-xl">
+      <div className="container mx-auto ">
+        <div className="max-w-md mx-auto ">
+          <div className="shadow-md shadow-white rounded-lg shadow-lg p-10 text-center text-xl bg-gradient-to-r from-zinc-500">
             {showMessage && (
               <div className="bg-orange-500 text-white px-4 py-2 rounded mb-4">
                 {showMessage}
               </div>
             )}
-            <form name="contact" data-netlify="true">
-              <div className="mb-4 ">
+            <form name="contact" data-netlify="true" className="bg-transparent">
+              <div className="mb-4 bg-transparent">
                 <label
                   htmlFor="name"
-                  className="block text-orange-500 font-bold mb-2"
+                  className="block text-orange-500 font-bold mb-2 bg-transparent"
                 >
                   Name:
                 </label>
@@ -56,14 +56,14 @@ const ContactForm = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="border  text-white border-gray-300 px-4 py-2 rounded w-full"
+                  className="border  text-white border-gray-300 px-4 py-2 rounded w-full bg-transparent"
                   required
                 />
               </div>
-              <div className="mb-4">
+              <div className="mb-4 bg-transparent">
                 <label
                   htmlFor="email"
-                  className="block text-orange-500 font-bold mb-2"
+                  className="block text-orange-500 font-bold mb-2 bg-transparent"
                 >
                   Email:
                 </label>
@@ -73,14 +73,14 @@ const ContactForm = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="border border-gray-300 px-4 py-2 rounded w-full"
+                  className="border border-gray-300 px-4 py-2 rounded w-full bg-transparent text-white"
                   required
                 />
               </div>
-              <div className="mb-4">
+              <div className="mb-4 bg-transparent">
                 <label
                   htmlFor="subject"
-                  className="block text-orange-500 font-bold mb-2"
+                  className="block text-orange-500 font-bold mb-2 bg-transparent"
                 >
                   Subject:
                 </label>
@@ -90,14 +90,14 @@ const ContactForm = () => {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="border border-gray-300 px-4 py-2 text-white rounded w-full"
+                  className="border border-gray-300 px-4 py-2 text-white rounded w-full bg-transparent"
                   required
                 />
               </div>
-              <div className="mb-4">
+              <div className="mb-4 bg-transparent">
                 <label
                   htmlFor="message"
-                  className="block text-orange-500 font-bold mb-2"
+                  className="block text-orange-500 font-bold mb-2 bg-transparent"
                 >
                   Message:
                 </label>
@@ -106,7 +106,7 @@ const ContactForm = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  className="border border-gray-300 px-4 py-2 text-white rounded w-full"
+                  className="border border-gray-300 px-4 py-2 text-white rounded w-full bg-transparent"
                   required
                 ></textarea>
               </div>
