@@ -7,13 +7,13 @@ import map from "../../Assets/Imgs/map.png";
 const Projects = () => {
   return (
     <section className="py-16 tracking-[.15em]" id="works">
-      <h2 className="text-4xl md:text-7xl font-bold text-center mb-8 text-orange-500 underline underline-offset-[10px] animate-wiggle bg-transparent">
+      <h2 className="text-4xl md:text-7xl text-5xl font-bold text-center mb-8 text-orange-500 underline underline-offset-[10px] animate-wiggle bg-transparent">
         My Projects
       </h2>
       <div className="container p-6 bg-transparent mx-auto tracking-[.1em]">
-        <div className="grid grid-cols-1  md:grid-cols-2  gap-10 shadow-sm shadow-white bg-transparent p-8 ">
+        <div className="grid grid-cols-1  md:grid-cols-2  gap-10  bg-transparent p-8 ">
           {/* Project 1 */}
-          <div className=" rounded overflow-hidden animate-wiggle shadow-md shadow-white">
+          <div className=" rounded overflow-hidden shadow-md shadow-white">
             <img
               src={omni}
               alt="omnifood"
@@ -103,7 +103,7 @@ const Projects = () => {
           </div>
 
           {/* Project 4 */}
-          <div className="bg-white rounded shadow-md overflow-hidden animate-wiggle shadow-md shadow-white">
+          <div className="bg-white rounded shadow-md overflow-hidden shadow-md shadow-white">
             <img
               src={map}
               alt="omnifood"

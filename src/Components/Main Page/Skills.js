@@ -10,7 +10,7 @@ const Skills = () => {
   return (
     <section className="relative">
       <div className="container mx-auto px-4">
-        <p className="text-orange-500 text-4xl md:text-7xl text-center mt-8 underline underline-offset-[8px] animate-wiggle">
+        <p className="text-orange-500 text-4xl md:text-7xl text-5xl text-center mt-8 underline underline-offset-[8px] animate-wiggle">
           Skills
         </p>
         <div className="md:flex md:justify-center md:px-6 py-8">

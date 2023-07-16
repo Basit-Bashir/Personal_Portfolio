@@ -10,13 +10,13 @@ const Main = () => {
         <p className="px-10 py-4 text-white bg-transparent text-4xl tracking-[.1em]">
           Hi, I'm
           <br />
-          <span className="bg-transparent text-orange-500 md:text-7xl">
+          <span className="bg-transparent text-orange-500 md:text-8xl text-6xl">
             {" "}
             Basit
           </span>
         </p>
 
-        <p className="px-4 py-4 md:text-xl bg-transparent text-white  rounded-lg  text-start mx-8 leading-[2] tracking-[.1em]">
+        <p className="px-4 py-4 md:text-2xl text-xl bg-transparent text-white  rounded-lg  text-start mx-8 leading-[2] tracking-[.1em]">
           A passionate front-end developer . I recently graduated with a Masters
           degree in computer Science, and I'm excited to embark on my career in
           web development. Currently being a Freelancer with hands on experience
