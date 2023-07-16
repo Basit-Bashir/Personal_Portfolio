@@ -3,7 +3,7 @@ import Main from "./Components/Main Page/Main";
 import Skills from "./Components/Main Page/Skills";
 import Projects from "./Components/Main Page/Projects";
 import Contact from "./Components/Main Page/Contact";
-// import Footer from "./Components/Footer/Footer";
+import Footer from "./Components/Footer/Footer";
 function App() {
   return (
     <>
@@ -12,7 +12,7 @@ function App() {
       <Skills />
       <Projects />
       <Contact />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
