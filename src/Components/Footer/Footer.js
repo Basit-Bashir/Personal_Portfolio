@@ -16,7 +16,7 @@ const Footer = () => {
             <h3 className="text-orange-500 animate-wiggle underline underline-offset-4 text-4xl font-bold mb-4">
               Contact at:
             </h3>
-            <p className="text-orange-500 text-lg">
+            <p className="text-orange-500 text-lg mb-4">
               Email:{" "}
               <a
                 href="mailto:wbhat56@gmail.com"

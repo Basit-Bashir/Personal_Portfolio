@@ -24,6 +24,7 @@ const Main = () => {
 
     return () => clearInterval(interval);
   }, []);
+
   return (
     <div className="md:h-screen px-4 shadow-md  shadow-white bg-[url('https://unsplash.com/photos/gpa8Y_Fk7Rg/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjg4OTcyNjIzfA&force=true')] bg-cover bg-fixed ">
       <div className="md:flex md:gap-[24px]  md:items-center  w-screen md:p-[8%] bg-transparent  rounded-lg shadow-md ">
