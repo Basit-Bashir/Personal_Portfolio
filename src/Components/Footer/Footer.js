@@ -16,7 +16,7 @@ const Footer = () => {
             <h3 className="text-orange-500 animate-wiggle underline underline-offset-4 text-4xl font-bold mb-4">
               Contact at:
             </h3>
-            <p className="text-orange-500 text-2xl">
+            <p className="text-orange-500 text-lg">
               Email:{" "}
               <a
                 href="mailto:wbhat56@gmail.com"
@@ -25,7 +25,7 @@ const Footer = () => {
                 wbhat56@gmail.com
               </a>
             </p>
-            <p className="text-orange-500 text-2xl">
+            <p className="text-orange-500 text-lg">
               Phone:{" "}
               <a
                 href="tel:7006352455"
@@ -36,15 +36,15 @@ const Footer = () => {
             </p>
           </div>
           <div className="md:text-center">
-            <h3 className="text-orange-500  text-4xl font-bold mb-4 underline underline-offset-4 animate-wiggle">
+            <h3 className="text-orange-500 mt-6 text-4xl font-bold mb-4 underline underline-offset-4 animate-wiggle">
               Follow Me:
             </h3>
-            <div className="flex space-x-4 mt-2 text-xl">
+            <div className="grid grid-cols-2 gap-6 place-items-center space-x-4 mt-2 text-md">
               <a
                 href="https://twitter.com/basit__bhatt"
                 target="_blank"
                 rel="noreferrer"
-                className="text-orange-500  border-2 p-2 rounded-lg hover:bg-orange-500 hover:text-black"
+                className="text-orange-500  p-2 rounded-lg hover:bg-orange-500 hover:text-black"
               >
                 Twitter
                 <FontAwesomeIcon
@@ -57,7 +57,7 @@ const Footer = () => {
                 href="https://www.instagram.com/basit__bhat"
                 target="_blank"
                 rel="noreferrer"
-                className="text-orange-500  border-2 p-2 rounded-lg hover:bg-orange-500 hover:text-black"
+                className="text-orange-500 p-2 rounded-lg hover:bg-orange-500 hover:text-black"
               >
                 Instagram
                 <FontAwesomeIcon
@@ -70,7 +70,7 @@ const Footer = () => {
                 href="https://linkedin.com/in/basit-bashir-6b732b204"
                 target="_blank"
                 rel="noreferrer"
-                className="text-orange-500  border-2 p-2 rounded-lg hover:bg-orange-500 hover:text-black"
+                className="text-orange-500 p-2 rounded-lg hover:bg-orange-500 hover:text-black"
               >
                 LinkedIn
                 <FontAwesomeIcon
@@ -83,7 +83,7 @@ const Footer = () => {
                 href="https://github.com/Basit-Bashir"
                 target="_blank"
                 rel="noreferrer"
-                className="text-orange-500  border-2 p-2 rounded-lg hover:bg-orange-500 hover:text-black"
+                className="text-orange-500 p-2 rounded-lg hover:bg-orange-500 hover:text-black"
               >
                 Github
                 <FontAwesomeIcon
