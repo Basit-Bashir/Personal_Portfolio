@@ -34,7 +34,7 @@ const ContactForm = () => {
       <h2 className="text-orange-500 text-4xl md:text-7xl text-5xl text-center mb-12 underline underline-offset-[8px] animate-wiggle">
         Contact Me
       </h2>
-      <div className="container mx-auto ">
+      <div className="container mx-auto animate-component">
         <div className="max-w-md mx-auto ">
           <div className="shadow-md shadow-white rounded-lg shadow-lg p-10 text-center text-xl bg-gradient-to-r from-zinc-500">
             {showMessage && (
