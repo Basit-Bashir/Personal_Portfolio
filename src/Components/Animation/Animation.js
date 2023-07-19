@@ -1,45 +1,41 @@
-import React, { useEffect, useState } from "react";
-import { Transition } from "@headlessui/react";
+import React, { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 
-const AnimatedComponent = ({ children }) => {
+const MotionComponent = ({ children }) => {
   const [isVisible, setIsVisible] = useState(false);
+  const motionRef = useRef(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const element = document.getElementById("animated-component");
-      const rect = element.getBoundingClientRect();
-      const isVisible = rect.left < window.innerWidth;
-      setIsVisible(isVisible);
-    };
-    window.addEventListener("scroll", handleScroll);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      });
+    });
+
+    if (motionRef.current) {
+      observer.observe(motionRef.current);
+    }
+
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      if (motionRef.current) {
+        // eslint-disable-next-line
+        observer.unobserve(motionRef.current);
+      }
     };
   }, []);
 
-  useEffect(() => {
-    if (isVisible) {
-      const elements = document.querySelectorAll(".animate-component");
-      elements.forEach((el, index) => {
-        el.classList.add("animate-custom");
-        el.style.animationDelay = `${(index + 1) * 10}s`; // Delay each element's animation
-      });
-    }
-  }, [isVisible]);
-
   return (
-    <div id="animated-component">
-      <Transition
-        show={isVisible}
-        enter="transition-opacity duration-1000"
-        enterFrom="opacity-0"
-        enterBetween="opacity-50"
-        enterTo="opacity-100"
-      >
-        {children}
-      </Transition>
-    </div>
+    <motion.div
+      ref={motionRef}
+      initial={{ x: 100, opacity: 0 }}
+      animate={isVisible ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
+      transition={{ duration: 2 }}
+    >
+      {children}
+    </motion.div>
   );
 };
 
-export default AnimatedComponent;
+export default MotionComponent;
