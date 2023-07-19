@@ -1,13 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link } from "react-scroll";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from "../../Assets/Imgs/logo.png";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = React.useState(false);
   const toggleNavBar = () => {
     setIsOpen(!isOpen);
   };
+
+  const navLinks = [
+    { title: "Home", to: "main" },
+    { title: "Skills", to: "skills" },
+    { title: "Projects", to: "projects" },
+    { title: "Contact", to: "contact" },
+  ];
 
   return (
     <>
@@ -16,19 +24,19 @@ const Navbar = () => {
           <img src={logo} alt="logo" className="h-14 w-auto rounded-xl" />
 
           <div className="hidden md:flex gap-8 bg-transparent">
-            {[
-              ["Home", "/main"],
-              ["Skills", "/skills"],
-              ["Projects", "/projects"],
-              ["Contact", "/contact"],
-            ].map(([title, url]) => (
-              <a
-                key={url}
-                href={url}
-                className="rounded-lg px-3 py-2 text-white transition-all duration-500 hover:bg-orange-500 hover:text-black"
+            {navLinks.map(({ title, to }) => (
+              <Link
+                key={to}
+                to={to}
+                smooth={true}
+                duration={500}
+                offset={-80}
+                spy={true}
+                activeClass="active"
+                className="rounded-lg px-3 py-2 text-white transition-all duration-500 hover:bg-orange-500 hover:text-black cursor-pointer"
               >
                 {title}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -54,19 +62,19 @@ const Navbar = () => {
           isOpen ? "opacity-100 max-h-screen " : "opacity-0 max-h-0"
         }`}
       >
-        {[
-          ["Home", "/main"],
-          ["Skills", "/skills"],
-          ["Projects", "/projects"],
-          ["Contact", "/contact"],
-        ].map(([title, url]) => (
-          <a
-            key={url}
-            href={url}
-            className="rounded-lg px-3 py-2 text-white transition-all duration-500 hover:bg-orange-500 hover:text-black bg-transparent"
+        {navLinks.map(({ title, to }) => (
+          <Link
+            key={to}
+            to={to}
+            smooth={true}
+            duration={800}
+            offset={-80}
+            spy={true}
+            activeClass="active"
+            className="bg-transparent rounded-lg px-3 py-2 text-white transition-all duration-500 hover:bg-orange-500 hover:text-black cursor-pointer"
           >
             {title}
-          </a>
+          </Link>
         ))}
       </div>
     </>
