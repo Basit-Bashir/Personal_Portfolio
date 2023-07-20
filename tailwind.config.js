@@ -4,6 +4,7 @@ module.exports = {
   content: ["./src/**/*.{html,js,d,ts}"],
   theme: {
     extend: {
+      backgroundStyle: ["backgroundImage,backgroundSize,backgroundRepeat"],
       animation: {
         wiggle: "wiggle 2s ease-in infinite",
       },

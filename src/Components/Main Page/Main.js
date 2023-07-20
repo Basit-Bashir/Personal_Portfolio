@@ -2,8 +2,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import React, { useEffect, useState } from "react";
 import MotionComponent from "../Animation/Animation";
+import bgImg from "../../Assets/Imgs/background.jpg";
 
 const Main = () => {
+  const backgroundStyle = {
+    backgroundImage: `url(${bgImg})`,
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+  };
   const [revealedText, setRevealedText] = useState("");
   const text = "Basit";
 
@@ -28,19 +34,21 @@ const Main = () => {
 
   return (
     <MotionComponent>
-      <div className="md:h-screen px-4 shadow-md  shadow-white bg-[url('https://unsplash.com/photos/gpa8Y_Fk7Rg/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjg4OTcyNjIzfA&force=true')] bg-cover bg-fixed ">
-        <div className="md:flex md:gap-[24px]  md:items-center  w-screen md:p-[8%] bg-transparent  rounded-lg shadow-md ">
-          <div className="md:w-1.5 md:h-40 bg-gradient-to-b from-orange-500  " />
-
+      <div
+        style={backgroundStyle}
+        className="relative md:h-screen px-4 shadow-md  shadow-white"
+      >
+        <div className="md:w-[30%] md:h-2 mx-auto absolute top-[10%] right-[60%] bg-gradient-to-b from-orange-500  " />
+        <div className="w-screen md:p-[8%] bg-transparent  rounded-lg shadow-md ">
           <p className="px-10 py-4 bg-transparent text-white text-4xl tracking-[.1em]">
             Hi, I'm
             <br />
             <span className="bg-transparent text-orange-500 md:text-8xl text-6xl">
-              {revealedText.padEnd(text.length, "_____")}
+              {revealedText.padEnd(text.length, "_")}
             </span>
           </p>
 
-          <p className="px-4 py-4 md:text-2xl text-xl rounded-lg text-white bg-transparent text-start mx-8 leading-[2] tracking-[.1em]">
+          <p className="px-4 py-4 md:text-2xl text-xl rounded-lg text-white bg-transparent text-start mx-8 md:leading-10 leading-10 tracking-[.15em]">
             A passionate front-end developer . I recently graduated with a
             Masters degree in computer Science, and I'm excited to embark on my
             career in web development. Currently being a Freelancer with hands

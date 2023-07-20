@@ -15,8 +15,8 @@ const Footer = () => {
     scroll.scrollToTop();
   };
   return (
-    <MotionComponent>
-      <footer className="relative border-t-4 py-8 tracking-[.1em]">
+    <footer className="relative border-t-4 py-8 tracking-[.1em]">
+      <MotionComponent>
         <div className="container mx-auto p-8 shadow-md shadow-white rounded-lg">
           <div className="flex flex-col md:flex-row md:justify-between">
             <div className="mb-4 md:mb-0">
@@ -109,8 +109,8 @@ const Footer = () => {
           fade
           className="text-orange-500 absolute right-[.1%] top-[80%] p-4 bg-transparent text-4xl cursor-pointer"
         />
-      </footer>
-    </MotionComponent>
+      </MotionComponent>
+    </footer>
   );
 };
 
