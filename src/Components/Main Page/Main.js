@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
-import React, { useEffect, useState } from "react";
 import MotionComponent from "../Animation/Animation";
 import bgImg from "../../Assets/Imgs/background.jpg";
+import { motion } from "framer-motion";
 
 const Main = () => {
   const backgroundStyle = {
@@ -10,27 +10,28 @@ const Main = () => {
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
   };
-  const [revealedText, setRevealedText] = useState("");
-  const text = "Basit";
-
-  useEffect(() => {
-    let currentIndex = 0;
-    let interval;
-
-    const revealNextCharacter = () => {
-      if (currentIndex < text.length) {
-        setRevealedText(() => text.slice(0, currentIndex));
-        currentIndex++;
-      } else {
-        setRevealedText("");
-        currentIndex = 0;
-      }
-    };
-
-    interval = setInterval(revealNextCharacter, 500);
-
-    return () => clearInterval(interval);
-  }, []);
+  const typingContainer = {
+    hidden: { opacity: 0, y: "-10px" },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.4,
+        ease: "easeInOut",
+      },
+    },
+  };
+  const typingText = {
+    hidden: { opacity: 0, y: "-20px" },
+    show: {
+      opacity: 1,
+      transition: {
+        ease: "easeInOut",
+        repeat: Infinity,
+        repeatType: "mirror",
+        repeatDelay: 2,
+      },
+    },
+  };
 
   return (
     <MotionComponent>
@@ -43,9 +44,22 @@ const Main = () => {
           <p className="px-10 py-4 bg-transparent text-white text-4xl tracking-[.1em]">
             Hi, I'm
             <br />
-            <span className="bg-transparent text-orange-500 md:text-8xl text-6xl">
-              {revealedText.padEnd(text.length, "_")}
-            </span>
+            <motion.span
+              className="bg-transparent text-orange-500 md:text-8xl text-6xl"
+              variants={typingContainer}
+              initial="hidden"
+              animate="show"
+            >
+              {Array.from("Basit ❤").map((word, i) => (
+                <motion.span
+                  key={i}
+                  variants={typingText}
+                  style={{ background: "transparent" }}
+                >
+                  {word}
+                </motion.span>
+              ))}
+            </motion.span>
           </p>
 
           <p className="px-4 py-4 md:text-2xl text-xl rounded-lg text-white bg-transparent text-start mx-8 md:leading-10 leading-10 tracking-[.15em]">
