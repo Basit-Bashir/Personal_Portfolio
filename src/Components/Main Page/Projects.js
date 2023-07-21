@@ -61,8 +61,8 @@ const Projects = () => {
                     Developed the frontend interface for e-commerce site.
                   </h3>
                   <p className="text-white mb-6 bg-transparent">
-                    The interface was designed to be clean and intuitive for an
-                    e-commerce site.
+                    The interface was designed to be intuitive for an e-commerce
+                    site.
                   </p>
                   <p className="text-white mb-6 bg-transparent">
                     <span className="text-orange-500 bg-transparent">
@@ -91,11 +91,11 @@ const Projects = () => {
                 />
                 <div className="p-6 h-full bg-gradient-to-r from-zinc-500">
                   <h3 className="text-xl text-orange-500 font-semibold mb-4 bg-transparent">
-                    Simple Weather App.
+                    A Weather App.
                   </h3>
                   <p className="text-white mb-6 bg-transparent">
-                    Enter the location you wish and get the weather details for
-                    the current day.
+                    Enter the location and get the weather details for the
+                    current day.
                   </p>
                   <p className="text-white mb-6 bg-transparent">
                     <span className="text-orange-500 bg-transparent">

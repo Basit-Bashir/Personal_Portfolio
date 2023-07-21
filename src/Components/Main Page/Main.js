@@ -62,7 +62,7 @@ const Main = () => {
             </motion.span>
           </p>
 
-          <p className="px-4 py-4 md:text-2xl text-xl rounded-lg text-white bg-transparent text-start mx-8 md:leading-10 leading-10 tracking-[.15em]">
+          <p className="px-4 py-4 md:text-2xl text-xl rounded-lg text-white bg-transparent text-start mx-8 md:leading-10 leading-10 tracking-[.15em] font-bold">
             A passionate front-end developer. I recently graduated with a
             Masters degree in computer Science, and I'm excited to embark on my
             career in web development. Currently being a Freelancer with hands
