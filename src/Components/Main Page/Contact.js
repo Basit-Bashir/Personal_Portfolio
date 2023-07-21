@@ -1,5 +1,6 @@
 import { React, useState } from "react";
 import MotionComponent from "../Animation/Animation";
+import { motion } from "framer-motion";
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -115,13 +116,22 @@ const ContactForm = () => {
                     required
                   ></textarea>
                 </div>
-                <button
+                <motion.button
+                  initial={{ y: 0 }}
+                  animate={{
+                    y: [-20, 20, -20],
+                  }}
+                  transition={{
+                    repeat: Infinity,
+                    duration: 1,
+                    ease: "easeInOut",
+                  }}
                   type="submit"
                   onClick={handleSubmit}
-                  className="border-2 mt-8 text-white hover:bg-orange-500 transition-all duration-500 cursor-pointer px-4 py-2 rounded-xl"
+                  className="border-2 border-orange-500 mt-8 text-white hover:bg-orange-500 transition-all duration-500 cursor-pointer px-4 py-2 rounded-xl"
                 >
                   Submit
-                </button>
+                </motion.button>
               </form>
             </div>
           </div>

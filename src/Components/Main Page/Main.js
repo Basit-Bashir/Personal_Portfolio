@@ -50,7 +50,7 @@ const Main = () => {
               initial="hidden"
               animate="show"
             >
-              {Array.from("Basit ❤").map((word, i) => (
+              {Array.from("Basit❤").map((word, i) => (
                 <motion.span
                   key={i}
                   variants={typingText}
@@ -63,20 +63,31 @@ const Main = () => {
           </p>
 
           <p className="px-4 py-4 md:text-2xl text-xl rounded-lg text-white bg-transparent text-start mx-8 md:leading-10 leading-10 tracking-[.15em]">
-            A passionate front-end developer . I recently graduated with a
+            A passionate front-end developer. I recently graduated with a
             Masters degree in computer Science, and I'm excited to embark on my
             career in web development. Currently being a Freelancer with hands
             on experience in HTML, CSS, JavaScript, ReactJS, TailwindCSS.
           </p>
         </div>
         <div className=" bg-transparent text-center">
-          <button className="px-4  py-4 md:text-xl text-white bg-black rounded-xl border-b-2 transition-all duration-500  hover:bg-orange-500 hover:text-black  mt-4 tracking-[.1em] my-[28%] ">
+          <motion.button
+            initial={{ y: 0 }}
+            animate={{
+              y: [-20, 20, -20],
+            }}
+            transition={{
+              repeat: Infinity,
+              duration: 2,
+              ease: "easeInOut",
+            }}
+            className="px-4  py-4 md:text-xl text-white bg-black rounded-xl border-b-2 transition-all duration-500  hover:bg-orange-500 hover:text-black  mt-4 tracking-[.1em] my-[28%] "
+          >
             Download CV{" "}
             <FontAwesomeIcon
               icon={faDownload}
-              className="hover:text-black  text-white bg-transparent animate-bounce"
+              className="hover:text-black  text-white bg-transparent"
             />
-          </button>
+          </motion.button>
         </div>
       </div>
     </MotionComponent>

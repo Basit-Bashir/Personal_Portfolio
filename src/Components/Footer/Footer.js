@@ -20,7 +20,7 @@ const Footer = () => {
         <div className="container mx-auto p-8 shadow-md shadow-white rounded-lg">
           <div className="flex flex-col md:flex-row md:justify-between">
             <div className="mb-4 md:mb-0">
-              <h3 className="text-orange-500 animate-wiggle underline underline-offset-4 text-4xl font-bold mb-4">
+              <h3 className="text-orange-500 underline underline-offset-4 text-4xl font-bold mb-4">
                 Contact at:
               </h3>
               <p className="text-orange-500 text-lg mb-4">
