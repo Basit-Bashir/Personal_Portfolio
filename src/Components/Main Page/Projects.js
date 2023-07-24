@@ -4,7 +4,7 @@ import omni from "../../Assets/Imgs/omni.png";
 import northstar from "../../Assets/Imgs/northstar.png";
 import weather from "../../Assets/Imgs/weather.png";
 import kashmir from "../../Assets/Imgs/kashmir.png";
-import map from "../../Assets/Imgs/map.png";
+
 import MotionComponent from "../Animation/Animation";
 
 const Projects = () => {
