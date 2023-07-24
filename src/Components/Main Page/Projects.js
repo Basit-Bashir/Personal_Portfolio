@@ -3,6 +3,7 @@ import "tailwindcss/tailwind.css";
 import omni from "../../Assets/Imgs/omni.png";
 import northstar from "../../Assets/Imgs/northstar.png";
 import weather from "../../Assets/Imgs/weather.png";
+import kashmir from "../../Assets/Imgs/kashmir.png";
 import map from "../../Assets/Imgs/map.png";
 import MotionComponent from "../Animation/Animation";
 
@@ -118,17 +119,17 @@ const Projects = () => {
             <MotionComponent>
               <div className="bg-white rounded shadow-md overflow-hidden shadow-md shadow-white">
                 <img
-                  src={map}
+                  src={kashmir}
                   alt="omnifood"
                   className="h-64 w-full object-scale-down md:object-cover border-b-2 "
                 />
                 <div className="p-6 h-full bg-gradient-to-r from-zinc-500">
                   <h3 className="text-xl text-orange-500 font-semibold mb-4 bg-transparent">
-                    Workout tracker with API integration.
+                    Travel Booking website interface
                   </h3>
                   <p className="text-white mb-6 bg-transparent">
-                    Drop a location on the map and start your excercise and the
-                    calculate it.
+                    Search across various places of Kashmir and it beauty also
+                    packages.
                   </p>
                   <p className="text-white mb-6 bg-transparent">
                     <span className="text-orange-500 bg-transparent">
@@ -137,7 +138,7 @@ const Projects = () => {
                     Used: HTML, CSS, JavaScript
                   </p>
                   <a
-                    href="https://workout-calculation.netlify.app/"
+                    href="https://kashmir-tour.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-link block text-center py-2 px-4 rounded-xl transition all duration-500 border-2 hover:bg-orange-500 bg-transparent font-bold"
