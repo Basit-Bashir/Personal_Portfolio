@@ -50,7 +50,7 @@ const Main = () => {
               initial="hidden"
               animate="show"
             >
-              {Array.from("Basit❤").map((word, i) => (
+              {Array.from("Basit").map((word, i) => (
                 <motion.span
                   key={i}
                   variants={typingText}

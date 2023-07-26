@@ -23,7 +23,7 @@ const Navbar = () => {
         <div className="flex place-items-center justify-between bg-transparent">
           <img src={logo} alt="logo" className="h-14 w-auto rounded-xl" />
 
-          <div className="hidden md:flex gap-8 bg-transparent">
+          <div className="hidden md:flex gap-8 bg-transparent tracking-widest">
             {navLinks.map(({ title, to }) => (
               <Link
                 key={to}
