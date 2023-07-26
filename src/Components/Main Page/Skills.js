@@ -1,3 +1,4 @@
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHtml5,
@@ -11,57 +12,71 @@ import MotionComponent from "../Animation/Animation";
 const Skills = () => {
   return (
     <MotionComponent>
-      <section className="relative ">
+      <section className="relative border-y-2 py-16">
         <div className="container mx-auto px-4">
-          <p className="text-orange-500 text-4xl md:text-7xl text-5xl text-center mt-8 underline underline-offset-[8px] animate-wiggle">
+          <p className="text-orange-500 text-5xl md:text-7xl text-center mt-8 font-bold animate-wiggle">
             Skills
           </p>
-          <div className="md:flex md:justify-center md:px-6 py-8 ">
-            <ul className="md:grid md:gap-8 md:grid-cols-2 md:place-items-center bg-gradient-to-b from-zinc-500 rounded-lg md:px-8 md:py-8 tracking-[.15em] text-xl md:text-2xl shadow-sm shadow-white text-white flex flex-col items-center">
-              <li className="flex items-center bg-transparent py-4">
-                HTML
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mt-12 ">
+            {skillsData.map((skill) => (
+              <div
+                key={skill.name}
+                className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center justify-center text-center shadow-md shadow-orange-500"
+              >
                 <FontAwesomeIcon
-                  icon={faHtml5}
-                  className="ml-4 bg-transparent text-red-500 md:text-4xl text-2xl"
+                  icon={skill.icon}
+                  className={`text-${skill.color} text-5xl mb-4 bg-transparent`}
                 />
-              </li>
-              <li className="flex items-center bg-transparent py-4">
-                CSS
-                <FontAwesomeIcon
-                  icon={faCss3Alt}
-                  className="ml-4 bg-transparent text-blue-500 md:text-4xl text-2xl"
-                />
-              </li>
-              <li className="flex items-center bg-transparent py-4">
-                JavaScript
-                <FontAwesomeIcon
-                  icon={faJs}
-                  className="ml-4 bg-transparent text-yellow-500 md:text-4xl text-2xl"
-                />
-              </li>
-              <li className="flex items-center bg-transparent py-4">
-                ReactJS
-                <FontAwesomeIcon
-                  icon={faReact}
-                  className="ml-4 bg-transparent text-blue-300 md:text-4xl text-2xl"
-                />
-              </li>
-              <li className="flex items-center bg-transparent py-4 md:text-center ">
-                TailwindCSS
-              </li>
-              <li className="flex items-center bg-transparent py-4 md:text-center ">
-                GitHub
-                <FontAwesomeIcon
-                  icon={faGithub}
-                  className="ml-4 bg-transparent text-white md:text-4xl text-2xl"
-                />
-              </li>
-            </ul>
+                <p className="text-xl font-bold text-gray-800 mb-2 bg-transparent">
+                  {skill.name}
+                </p>
+                <p className="tracking-widest font-semibold bg-transparent">
+                  {skill.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
     </MotionComponent>
   );
 };
+
+const skillsData = [
+  {
+    name: "HTML",
+    description: "Build the structure of web pages.",
+    icon: faHtml5,
+    color: "red-500",
+  },
+  {
+    name: "CSS",
+    description: "Style and design web pages.",
+    icon: faCss3Alt,
+    color: "blue-500",
+  },
+  {
+    name: "JavaScript",
+    description: "Add interactivity and functionality to websites.",
+    icon: faJs,
+    color: "yellow-500",
+  },
+  {
+    name: "ReactJS",
+    description: "Build modern and dynamic user interfaces.",
+    icon: faReact,
+    color: "blue-500",
+  },
+  {
+    name: "TailwindCSS",
+    description: "Utilize a utility-first CSS framework.",
+  },
+  {
+    name: "GitHub",
+    description: "Collaborate and manage code repositories.",
+    icon: faGithub,
+    color: "black",
+  },
+];
 
 export default Skills;
