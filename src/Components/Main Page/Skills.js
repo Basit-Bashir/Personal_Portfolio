@@ -7,38 +7,69 @@ import {
   faReact,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
-import MotionComponent from "../Animation/Animation";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Skills = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const box = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.5,
+        duration: 0.5,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
   return (
-    <MotionComponent>
-      <section className="relative border-y-2 py-16">
-        <div className="container mx-auto px-4">
-          <p className="text-orange-500 text-5xl md:text-7xl text-center mt-8 font-bold animate-wiggle">
-            Skills
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mt-12 ">
-            {skillsData.map((skill) => (
-              <div
-                key={skill.name}
-                className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center justify-center text-center shadow-md shadow-orange-500"
-              >
-                <FontAwesomeIcon
-                  icon={skill.icon}
-                  className={`text-${skill.color} text-5xl mb-4 bg-transparent`}
-                />
-                <p className="text-xl font-bold text-gray-800 mb-2 bg-transparent">
-                  {skill.name}
-                </p>
-                <p className="tracking-widest font-semibold bg-transparent">
-                  {skill.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    </MotionComponent>
+    <section className="relative mx-auto border-b-2 py-16 bg-transparent">
+      <div className=" container mx-auto px-4">
+        <p className="text-orange-500 text-5xl md:text-7xl text-center mt-8 font-bold animate-wiggle">
+          Skills
+        </p>
+        <motion.div
+          ref={ref}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={box}
+          className="box grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mt-12 "
+        >
+          {skillsData.map((skill) => (
+            <motion.div
+              key={skill.name}
+              variants={item}
+              className="item bg-white rounded-lg shadow-lg p-6 flex flex-col items-center justify-center text-center shadow-md shadow-orange-500"
+            >
+              <FontAwesomeIcon
+                icon={skill.icon}
+                className={`text-${skill.color} text-5xl mb-4 bg-transparent`}
+              />
+              <p className="text-xl font-bold text-gray-800 mb-2 bg-transparent">
+                {skill.name}
+              </p>
+              <p className="text-orange-700 tracking-widest font-semibold bg-transparent">
+                {skill.description}
+              </p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
   );
 };
 

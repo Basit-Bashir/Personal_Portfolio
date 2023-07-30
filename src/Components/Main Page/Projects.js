@@ -11,45 +11,12 @@ const Projects = () => {
   return (
     <MotionComponent>
       <section className="py-16 tracking-[.15em]" id="works">
-        <h2 className="text-4xl md:text-7xl text-5xl font-bold text-center mb-8 text-orange-500 underline underline-offset-[10px] animate-wiggle bg-transparent">
+        <h2 className="text-4xl md:text-7xl text-5xl font-bold text-center mb-8 text-orange-500 underline underline-offset-[18px] animate-wiggle bg-transparent">
           My Projects
         </h2>
         <div className="container p-6 bg-transparent mx-auto tracking-[.1em]">
           <div className="grid grid-cols-1  md:grid-cols-2  gap-10  bg-transparent p-8 ">
             {/* Project 1 */}
-            <MotionComponent>
-              <div className=" rounded overflow-hidden shadow-md shadow-white">
-                <img
-                  src={omni}
-                  alt="omnifood"
-                  className="h-64 w-full object-scale-down md:object-cover border-b-2"
-                />
-                <div className="p-6 bg-gradient-to-r from-zinc-500 h-full">
-                  <h3 className="text-xl text-orange-500 font-semibold mb-4 bg-transparent">
-                    Developed the frontend for a Food ordering website.
-                  </h3>
-                  <p className="text-white mb-6 bg-transparent">
-                    Also includes various sections related to Pricing, Gallery
-                    of food.
-                  </p>
-                  <p className="text-white mb-6 bg-transparent">
-                    <span className="text-orange-500 bg-transparent">
-                      Tech{" "}
-                    </span>
-                    Used: HTML, CSS, JavaScript
-                  </p>
-                  <a
-                    href="https://omnifood-basits.netlify.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-link block text-center py-2 px-4 rounded-xl transition all duration-500 border-2 hover:bg-orange-500 bg-transparent font-bold text-white"
-                  >
-                    Click here!
-                  </a>
-                </div>
-              </div>
-            </MotionComponent>
-            {/* Project 2 */}
             <MotionComponent>
               <div className="bg-white rounded shadow-md overflow-hidden shadow-md shadow-white">
                 <img
@@ -82,7 +49,71 @@ const Projects = () => {
                 </div>
               </div>
             </MotionComponent>
-            {/* Project 3 */}
+            <MotionComponent>
+              <div className="bg-white rounded shadow-md overflow-hidden shadow-md shadow-white">
+                <img
+                  src={kashmir}
+                  alt="omnifood"
+                  className="h-64 w-full object-scale-down md:object-cover border-b-2 "
+                />
+                <div className="p-6 h-full bg-gradient-to-r from-zinc-500">
+                  <h3 className="text-xl text-orange-500 font-semibold mb-4 bg-transparent">
+                    Travel Booking website interface
+                  </h3>
+                  <p className="text-white mb-6 bg-transparent">
+                    Search across various places of Kashmir and it beauty also
+                    packages.
+                  </p>
+                  <p className="text-white mb-6 bg-transparent">
+                    <span className="text-orange-500 bg-transparent">
+                      Tech{" "}
+                    </span>
+                    Used: HTML, CSS, JavaScript
+                  </p>
+                  <a
+                    href="https://kashmir-tour.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white btn-link block text-center py-2 px-4 rounded-xl transition all duration-500 border-2 hover:bg-orange-500 bg-transparent font-bold"
+                  >
+                    Click here!
+                  </a>
+                </div>
+              </div>
+            </MotionComponent>
+            <MotionComponent>
+              <div className=" rounded overflow-hidden shadow-md shadow-white">
+                <img
+                  src={omni}
+                  alt="omnifood"
+                  className="h-64 w-full object-scale-down md:object-cover border-b-2"
+                />
+                <div className="p-6 bg-gradient-to-r from-zinc-500 h-full">
+                  <h3 className="text-xl text-orange-500 font-semibold mb-4 bg-transparent">
+                    Developed the frontend for a Food ordering website.
+                  </h3>
+                  <p className="text-white mb-6 bg-transparent">
+                    Also includes various sections related to Pricing, Gallery
+                    of food.
+                  </p>
+                  <p className="text-white mb-6 bg-transparent">
+                    <span className="text-orange-500 bg-transparent">
+                      Tech{" "}
+                    </span>
+                    Used: HTML, CSS, JavaScript
+                  </p>
+                  <a
+                    href="https://omnifood-basits.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-link block text-center py-2 px-4 rounded-xl transition all duration-500 border-2 hover:bg-orange-500 bg-transparent font-bold text-white"
+                  >
+                    Click here!
+                  </a>
+                </div>
+              </div>
+            </MotionComponent>
+
             <MotionComponent>
               <div className=" rounded shadow-md overflow-hidden shadow-md shadow-white">
                 <img
@@ -116,38 +147,6 @@ const Projects = () => {
               </div>
             </MotionComponent>
             {/* Project 4 */}
-            <MotionComponent>
-              <div className="bg-white rounded shadow-md overflow-hidden shadow-md shadow-white">
-                <img
-                  src={kashmir}
-                  alt="omnifood"
-                  className="h-64 w-full object-scale-down md:object-cover border-b-2 "
-                />
-                <div className="p-6 h-full bg-gradient-to-r from-zinc-500">
-                  <h3 className="text-xl text-orange-500 font-semibold mb-4 bg-transparent">
-                    Travel Booking website interface
-                  </h3>
-                  <p className="text-white mb-6 bg-transparent">
-                    Search across various places of Kashmir and it beauty also
-                    packages.
-                  </p>
-                  <p className="text-white mb-6 bg-transparent">
-                    <span className="text-orange-500 bg-transparent">
-                      Tech{" "}
-                    </span>
-                    Used: HTML, CSS, JavaScript
-                  </p>
-                  <a
-                    href="https://kashmir-tour.vercel.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white btn-link block text-center py-2 px-4 rounded-xl transition all duration-500 border-2 hover:bg-orange-500 bg-transparent font-bold"
-                  >
-                    Click here!
-                  </a>
-                </div>
-              </div>
-            </MotionComponent>
           </div>
         </div>
       </section>
