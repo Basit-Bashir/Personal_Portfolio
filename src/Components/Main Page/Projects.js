@@ -68,7 +68,7 @@ const Projects = () => {
                     <span className="text-orange-500 bg-transparent">
                       Tech{" "}
                     </span>
-                    Used: HTML, CSS, JavaScript
+                    Used: ReactJS, TailwindCSS, Framer-Motion
                   </p>
                   <a
                     href="https://kashmir-tour.vercel.app/"
