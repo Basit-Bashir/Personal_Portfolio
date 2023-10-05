@@ -26,7 +26,7 @@ const Projects = () => {
                 />
                 <div className="p-6 h-full bg-gradient-to-r from-zinc-500">
                   <h3 className="text-xl text-orange-500 font-semibold mb-4 bg-transparent">
-                    Developed the frontend interface for e-commerce site.
+                    e-commerce Website.
                   </h3>
                   <p className="text-white mb-6 bg-transparent">
                     The interface was designed to be intuitive for an e-commerce
@@ -90,7 +90,7 @@ const Projects = () => {
                 />
                 <div className="p-6 bg-gradient-to-r from-zinc-500 h-full">
                   <h3 className="text-xl text-orange-500 font-semibold mb-4 bg-transparent">
-                    Developed the frontend for a Food ordering website.
+                    Food ordering website.
                   </h3>
                   <p className="text-white mb-6 bg-transparent">
                     Also includes various sections related to Pricing, Gallery
