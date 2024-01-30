@@ -11,7 +11,7 @@ const Main = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
 
   useEffect(() => {
-    const textOptions = ["Web Developer", "Gamer..."];
+    const textOptions = ["Web Developer", "part time Gamer"];
     let currentIndex = 0;
 
     const intervalId = setInterval(() => {
