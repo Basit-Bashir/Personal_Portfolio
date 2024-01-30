@@ -1,8 +1,8 @@
 import React from "react";
 import "tailwindcss/tailwind.css";
-import omni from "../../Assets/Imgs/omni.png";
-import northstar from "../../Assets/Imgs/northstar.png";
-import weather from "../../Assets/Imgs/weather.png";
+import travel from "../../Assets/Imgs/travel.png";
+import titanic from "../../Assets/Imgs/titanic.png";
+import north from "../../Assets/Imgs/north.png";
 import kashmir from "../../Assets/Imgs/kashmir.png";
 
 import MotionComponent from "../Animation/Animation";
@@ -15,12 +15,11 @@ const Projects = () => {
           My Projects
         </h2>
         <div className="container p-6 bg-transparent mx-auto tracking-[.1em]">
-          <div className="grid grid-cols-1  md:grid-cols-2  gap-10  bg-transparent p-8 ">
-            {/* Project 1 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 bg-transparent p-8">
             <MotionComponent>
-              <div className="bg-white rounded shadow-md overflow-hidden shadow-md shadow-white">
+              <div className="bg-white rounded shadow-md overflow-hidden shadow-md shadow-white h-full">
                 <img
-                  src={northstar}
+                  src={titanic}
                   alt="omnifood"
                   className="h-64 w-full object-scale-down md:object-cover border-b-2"
                 />
@@ -36,10 +35,10 @@ const Projects = () => {
                     <span className="text-orange-500 bg-transparent">
                       Tech{" "}
                     </span>
-                    Used: HTML, CSS-Modules, ReactJS
+                    Used: JavaScript, ReactJS, TailwindCSS
                   </p>
                   <a
-                    href="https://north-star-frontend.vercel.app/"
+                    href="https://www.titanicservices.in"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-link block text-center py-2 px-4 rounded-xl transition all duration-500 border-2 hover:bg-orange-500 bg-transparent font-bold text-white"
@@ -50,7 +49,7 @@ const Projects = () => {
               </div>
             </MotionComponent>
             <MotionComponent>
-              <div className="bg-white rounded shadow-md overflow-hidden shadow-md shadow-white">
+              <div className="bg-white rounded shadow-md overflow-hidden shadow-md shadow-white h-full">
                 <img
                   src={kashmir}
                   alt="omnifood"
@@ -82,19 +81,19 @@ const Projects = () => {
               </div>
             </MotionComponent>
             <MotionComponent>
-              <div className=" rounded overflow-hidden shadow-md shadow-white">
+              <div className=" rounded overflow-hidden shadow-md shadow-white h-full">
                 <img
-                  src={omni}
+                  src={travel}
                   alt="omnifood"
                   className="h-64 w-full object-scale-down md:object-cover border-b-2"
                 />
                 <div className="p-6 bg-gradient-to-r from-zinc-500 h-full">
                   <h3 className="text-xl text-orange-500 font-semibold mb-4 bg-transparent">
-                    Food ordering website.
+                    Travel To-Do List website.
                   </h3>
                   <p className="text-white mb-6 bg-transparent">
-                    Also includes various sections related to Pricing, Gallery
-                    of food.
+                    User can add items to the list and he can also mark the
+                    items which he/she has packed.
                   </p>
                   <p className="text-white mb-6 bg-transparent">
                     <span className="text-orange-500 bg-transparent">
@@ -103,7 +102,7 @@ const Projects = () => {
                     Used: HTML, CSS, JavaScript
                   </p>
                   <a
-                    href="https://omnifood-basits.netlify.app/"
+                    href="https://travel-todo-list.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-link block text-center py-2 px-4 rounded-xl transition all duration-500 border-2 hover:bg-orange-500 bg-transparent font-bold text-white"
@@ -115,28 +114,28 @@ const Projects = () => {
             </MotionComponent>
 
             <MotionComponent>
-              <div className=" rounded shadow-md overflow-hidden shadow-md shadow-white">
+              <div className=" rounded shadow-md overflow-hidden shadow-md shadow-white h-full">
                 <img
-                  src={weather}
+                  src={north}
                   alt="omnifood"
                   className="h-64 w-full object-scale-down md:object-cover border-b-2"
                 />
                 <div className="p-6 h-full bg-gradient-to-r from-zinc-500">
                   <h3 className="text-xl text-orange-500 font-semibold mb-4 bg-transparent">
-                    A Weather App.
+                    E-commerce Lifestyle website.
                   </h3>
                   <p className="text-white mb-6 bg-transparent">
-                    Enter the location and get the weather details for the
-                    current day.
+                    User can search for lifestyle clothes, Shoes and much more
+                    according to his needs from a variety of things.
                   </p>
                   <p className="text-white mb-6 bg-transparent">
                     <span className="text-orange-500 bg-transparent">
                       Tech{" "}
                     </span>
-                    Used: HTML, CSS, JavaScript
+                    Used: NextJS,Tailwindcss, Stripe, Sanity.io
                   </p>
                   <a
-                    href="https://basit-weather-app.netlify.app/"
+                    href="https://e-commerce-next-js-lyart.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-link block text-center py-2 px-4 rounded-xl transition all duration-500 border-2 hover:bg-orange-500 bg-transparent font-bold text-white"
@@ -146,7 +145,6 @@ const Projects = () => {
                 </div>
               </div>
             </MotionComponent>
-            {/* Project 4 */}
           </div>
         </div>
       </section>

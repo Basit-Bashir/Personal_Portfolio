@@ -1,36 +1,47 @@
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import MotionComponent from "../Animation/Animation";
 import bgImg from "../../Assets/Imgs/background.jpg";
 import { motion } from "framer-motion";
+import resumePDF from "../../Assets/resume.pdf";
 
 const Main = () => {
+  const [typedText, setTypedText] = useState("");
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+
+  useEffect(() => {
+    const textOptions = ["Web Developer", "Gamer..."];
+    let currentIndex = 0;
+
+    const intervalId = setInterval(() => {
+      if (currentIndex <= textOptions[currentTextIndex].length) {
+        setTypedText(textOptions[currentTextIndex].slice(0, currentIndex));
+        currentIndex += 1;
+      } else {
+        setTypedText("");
+        currentIndex = 0;
+        setCurrentTextIndex(
+          (prevIndex) => (prevIndex + 1) % textOptions.length
+        );
+      }
+    }, 300);
+
+    return () => clearInterval(intervalId);
+  }, [currentTextIndex]);
   const backgroundStyle = {
     backgroundImage: `url(${bgImg})`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
   };
-  const typingContainer = {
-    hidden: { opacity: 0, y: "-10px" },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.4,
-        ease: "easeInOut",
-      },
-    },
-  };
-  const typingText = {
-    hidden: { opacity: 0, y: "-20px" },
-    show: {
-      opacity: 1,
-      transition: {
-        ease: "easeInOut",
-        repeat: Infinity,
-        repeatType: "mirror",
-        repeatDelay: 2,
-      },
-    },
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = resumePDF;
+    link.download = "resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -41,25 +52,13 @@ const Main = () => {
       >
         <div className="md:w-[30%] md:h-2 mx-auto absolute top-[10%] right-[60%] bg-gradient-to-b from-orange-500  " />
         <div className="w-screen md:p-[8%] bg-transparent  rounded-lg shadow-md ">
-          <p className="px-10 py-4 bg-transparent text-white text-4xl tracking-[.1em]">
-            Hi, I'm
-            <br />
-            <motion.span
-              className="bg-transparent text-orange-500 md:text-8xl text-6xl"
-              variants={typingContainer}
-              initial="hidden"
-              animate="show"
-            >
-              {Array.from("Basit").map((word, i) => (
-                <motion.span
-                  key={i}
-                  variants={typingText}
-                  style={{ background: "transparent" }}
-                >
-                  {word}
-                </motion.span>
-              ))}
-            </motion.span>
+          <p className="px-10 py-4 bg-transparent text-white text-4xl tracking-[.1em] leading-[3rem]">
+            Hi, I'm{" "}
+            <span className="font-bold text-5xl bg-transparent">Basit</span>
+            <br />a{" "}
+            <span className="text-orange-500 font-bold bg-transparent">
+              {typedText}
+            </span>
           </p>
 
           <p className="px-4 py-4 md:text-2xl text-xl rounded-lg text-white bg-transparent text-start mx-8 md:leading-10 leading-10 tracking-[.15em] font-bold">
@@ -81,6 +80,7 @@ const Main = () => {
               ease: "easeInOut",
             }}
             className="px-4  py-4 md:text-xl text-white bg-black rounded-xl border-b-2 transition-all duration-500  hover:bg-orange-500 hover:text-black  mt-4 tracking-[.1em] my-[28%] "
+            onClick={handleDownload}
           >
             Download CV{" "}
             <FontAwesomeIcon
