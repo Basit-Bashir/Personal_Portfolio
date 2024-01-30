@@ -55,8 +55,8 @@ const Main = () => {
           <p className="px-10 py-4 bg-transparent text-white text-4xl tracking-[.1em] leading-[3rem]">
             Hi, I'm{" "}
             <span className="font-bold text-5xl bg-transparent">Basit</span>
-            <br />a{" "}
-            <span className="text-orange-500 font-bold bg-transparent">
+            <br />a <t />
+            <span className="text-orange-500 font-bold bg-transparent lg:text-5xl text-2xl">
               {typedText}
             </span>
           </p>
