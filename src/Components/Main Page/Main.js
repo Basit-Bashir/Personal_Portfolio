@@ -79,7 +79,7 @@ const Main = () => {
               duration: 2,
               ease: "easeInOut",
             }}
-            className="px-4  py-4 md:text-xl text-white bg-black rounded-xl border-b-2 transition-all duration-500  hover:bg-orange-500 hover:text-black  mt-4 tracking-[.1em] my-[28%] "
+            className="px-4  py-4 md:text-xl text-white bg-black rounded-xl border-b-2 transition-all duration-500  hover:bg-orange-500 hover:text-black  mt-4 tracking-[.1em] my-[20%] "
             onClick={handleDownload}
           >
             Download CV{" "}

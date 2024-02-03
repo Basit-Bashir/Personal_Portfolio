@@ -100,7 +100,7 @@ const Skills = () => {
               <p
                 className={`${progressColor(
                   skill.proficiency
-                )} rounded-full text-white tracking-wider w-1/3 mx-auto mt-2 h-6 text-sm`}
+                )} rounded-full text-white tracking-wider w-1/2 mx-auto mt-2 h-6 text-sm flex items-center justify-center`}
               >
                 {skill.proficiency}
               </p>
